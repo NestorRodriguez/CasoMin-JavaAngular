@@ -1,0 +1,13 @@
+<div class="container postCard">
+    <div class="card " *ngFor="let item of post">
+        Publicado por {{item.usuario.nombre}}
+        <div class="card-header bg-dark text-white my-2">
+            {{item.titulo}}
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" >
+                {{item.descripcion}}
+            </li>
+        </ul>
+    </div>
+</div>
