@@ -71,3 +71,63 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2021-05-06 09:14:42.916
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:03.052
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:03.053
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4bca2a09[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:03.054
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:03.087
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.926
+!MESSAGE Boot LS startup time from start to initialized: 2862ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.959
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.aTeVucsiisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.962
+!MESSAGE subscribing to classpath changes: sts4.classpath.aTeVucsi isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.964
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.967
+!MESSAGE subsribers = {sts4.classpath.aTeVucsi=Send Classpath Notifications(128)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.967
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.967
+!MESSAGE project ministerio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.968
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.968
+!MESSAGE Preparing classpath changed notification ministerio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.968
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.aTeVucsi => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.969
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.978
+!MESSAGE classpath=110 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.983
+!MESSAGE buffering callback sts4.classpath.aTeVucsi ministerio false 110
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:05.984
+!MESSAGE executing callback sts4.classpath.aTeVucsi 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-06 09:15:06.019
+!MESSAGE executing callback sts4.classpath.aTeVucsi SUCCESS [done]
