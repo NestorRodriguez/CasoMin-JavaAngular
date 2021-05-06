@@ -1,4 +1,13 @@
 .postCard {
-  margin: 10px, 10px;
-  padding: 10px;
+  padding-bottom: 120px;
+  height: calc(100vh-8px);
+}
+
+.addButton {
+  position: fixed;
+  text-align: right;
+  bottom: 60px;
+  width: 90%;
+  margin: 25px 20px;
+  border-radius: 20px;
 }
