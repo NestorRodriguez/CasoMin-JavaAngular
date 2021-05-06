@@ -165,21 +165,6 @@ public class Usuario implements Serializable {
 	}
 
 	/**
-	 * @return the estado
-	 */
-	@Column(name = "ESTADO", nullable = true)
-	public boolean isEstado() {
-		return estado;
-	}
-
-	/**
-	 * @param estado the estado to set
-	 */
-	public void setEstado(boolean estado) {
-		this.estado = estado;
-	}
-
-	/**
 	 * @return the rol
 	 */
 	@OneToOne
@@ -203,7 +188,7 @@ public class Usuario implements Serializable {
 	@Override
 	public String toString() {
 		return "UsuarioBO [id=" + id + ", documento=" + documento + ", userName=" + userName + ", nombre=" + nombre
-				+ ", mail=" + mail + ", estado=" + estado + ", rol=" + rol + "]";
+				+ ", mail=" + mail + ", rol=" + rol + "]";
 	}
 
 }

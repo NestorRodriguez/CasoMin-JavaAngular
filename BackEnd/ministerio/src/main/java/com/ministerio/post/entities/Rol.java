@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @NamedQueries(value = { @NamedQuery(name = "Rol.findAllRol", query = "SELECT r FROM Rol r"),
 		@NamedQuery(name = "Rol.findRolById", query = "SELECT r FROM Rol r WHERE r.id = :idRol"),
-		@NamedQuery(name = "Rol.findAllRolesByEstado", query = "SELECT r FROM Rol r WHERE r.estado = :estado")
+		@NamedQuery(name = "Rol.findAllRolesByEstado", query = "SELECT r FROM Rol r")
 
 })
 
@@ -43,12 +43,7 @@ public class Rol implements Serializable {
 	 * Descripci�n del rol
 	 */
 	private String descripcion;
-
-	/**
-	 * Estado del rol
-	 */
-	private boolean estado;
-
+	
 	// --------------------------------
 	// Constructor de la Clase.
 	// --------------------------------
@@ -95,21 +90,6 @@ public class Rol implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	/**
-	 * @return the estado
-	 */
-	@Column(name = "ESTADO", nullable = true)
-	public boolean getEstado() {
-		return estado;
-	}
-
-	/**
-	 * @param estado the estado to set
-	 */
-	public void setEstado(boolean estado) {
-		this.estado = estado;
-	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -117,7 +97,7 @@ public class Rol implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return "Rol [id=" + id + ", descripcion=" + descripcion + ", estado=" + estado + "]";
+		return "Rol [id=" + id + ", descripcion=" + descripcion + "]";
 	}
 
 }
