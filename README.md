@@ -4,7 +4,7 @@ Para el front:
 2. ng serve
 
 Para el back:
-1. Importar proyecto e el editor
+1. Importar proyecto en el editor
 2. Run App boot
 
 Para la base de datos
