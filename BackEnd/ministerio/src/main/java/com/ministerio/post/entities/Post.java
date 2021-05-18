@@ -14,6 +14,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+@NamedQueries(value = {
+		@NamedQuery(name = "Post.findPostByIdUsuario", query = "SELECT p FROM Post p WHERE p.usuario.id = :id"),
+		@NamedQuery(name = "Post.findPostShared", query = "SELECT p FROM Post p WHERE p.compartir = :estado")})
 @Entity
 @Table(name = "POST")
 public class Post implements Serializable {
@@ -30,7 +33,7 @@ public class Post implements Serializable {
 	/**
 	 * Identificador de la entidad
 	 */
-	private int id;
+	private long id;
 
 	/**
 	 * Titulo del post
@@ -41,6 +44,11 @@ public class Post implements Serializable {
 	 * Descripción de la publicación
 	 */
 	private String descripcion;
+	
+	/**
+	 * Compatir la publicación
+	 */
+	private boolean compartir;
 
 	/**
 	 * Usuario de la publicación
@@ -61,12 +69,16 @@ public class Post implements Serializable {
 	 * @param id
 	 * @param titulo
 	 * @param descripcion
+	 * @param compartir
+	 * @param usuario
 	 */
-	public Post(int id, String titulo, String descripcion) {
+	public Post(long id, String titulo, String descripcion, boolean compartir, Usuario usuario) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.descripcion = descripcion;
+		this.compartir = compartir;
+		this.usuario = usuario;
 	}
 
 	/**
@@ -75,11 +87,11 @@ public class Post implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_POST_PK", nullable = false)
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -106,6 +118,18 @@ public class Post implements Serializable {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	/**
+	 * @return compartir
+	 */
+	@Column(name = "COMPARTIR", nullable = false)
+	public boolean isCompartir() {
+		return compartir;
+	}
+
+	public void setCompartir(boolean compartir) {
+		this.compartir = compartir;
+	}
 
 	/**
 	 * @return usuario
@@ -122,8 +146,8 @@ public class Post implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", usuario=" + usuario + "]";
+		return "Post [id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", compartir=" + compartir
+				+ ", usuario=" + usuario + "]";
 	}
-	
 	
 }

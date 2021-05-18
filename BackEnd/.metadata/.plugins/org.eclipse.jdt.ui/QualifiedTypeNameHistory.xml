@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.ministerio.post.dao.IUsuarioDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ministerio.post.dao.IPostDao"/>
+<fullyQualifiedTypeName name="com.ministerio.post.servicesinterface.IUsuarioServices"/>
+<fullyQualifiedTypeName name="com.ministerio.post.entities.Usuario"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.ministerio.post.servicesinterface.IPostServices"/>
+<fullyQualifiedTypeName name="com.ministerio.post.entities.Post"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="com.ministerio.post.dao.IRolDao"/>
+<fullyQualifiedTypeName name="com.ministerio.post.servicesinterface.IRolServices"/>
+<fullyQualifiedTypeName name="com.ministerio.post.entities.Rol"/>
+</qualifiedTypeNameHistroy>

@@ -20,6 +20,14 @@ export class PostService {
       );
     }
 
+    getPostByUserId(id):
+    Observable<any[]> {
+      return this.http.get<any[]>(this.serverUrlUsers+"/"+id+"/"+true).pipe(
+        tap(data => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+    }
+
     private handleError(err: HttpErrorResponse) {
       let errorMessage = '';
       if (err.error instanceof ErrorEvent) {

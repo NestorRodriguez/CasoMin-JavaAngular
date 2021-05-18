@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container postCard">
     <div class="card border-info my-2" *ngFor="let item of post">
         <div class="card-header bg-dark text-white my-2">
@@ -12,7 +13,4 @@
             Publicado por {{item.usuario.nombre}}
         </div>
     </div>
-</div>
-<div class="addButton" color="primary">
-    <button  type="button" class="btn btn-success">Agregar post</button>
 </div>

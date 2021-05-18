@@ -14,12 +14,10 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @NamedQueries(value = {
-		@NamedQuery(name = "Usuario.findUsuarioByPK", query = "SELECT c FROM Usuario c WHERE c.id = :idUsuario"),
+		@NamedQuery(name = "Usuario.findUsuarioByMail", query = "SELECT c FROM Usuario c WHERE c.mail = :mail"),
 		@NamedQuery(name = "Usuario.findAllUsuario", query = "SELECT c FROM Usuario c"),
-		@NamedQuery(name = "Usuario.findUsuarioByUserName", query = "SELECT u FROM Usuario u WHERE u.userName = :userName"),
-		@NamedQuery(name = "Usuario.findUsuariosByRol", query = "SELECT u FROM Usuario u WHERE u.rol.id = :idRol"),
-		@NamedQuery(name = "Usuario.findUsuariosByDocumento", query = "SELECT u FROM Usuario u WHERE u.documento = :documento") })
-
+		@NamedQuery(name = "Usuario.findUsuarioByUserName", query = "SELECT u FROM Usuario u WHERE u.mail = :mail and u.password = :password"),
+		@NamedQuery(name = "Usuario.findUsuariosByRol", query = "SELECT u FROM Usuario u WHERE u.rol.id = :idRol") })
 @Entity
 @Table(name = "USUARIOS")
 public class Usuario implements Serializable {
@@ -45,12 +43,7 @@ public class Usuario implements Serializable {
 	/**
 	 * Numero de documento de la persona
 	 */
-	private String documento;
-
-	/**
-	 * Nombre de usuario en el sistema
-	 */
-	private String userName;
+	private String password;
 
 	/**
 	 * Nombre de la persona
@@ -103,35 +96,18 @@ public class Usuario implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	/**
-	 * @return the documento
+	 * @return password
 	 */
-	@Column(name = "DOCUMENTO", nullable = false)
-	public String getDocumento() {
-		return documento;
+	public String getPassword() {
+		return password;
 	}
-
 	/**
-	 * @param documento the documento to set
+	 * @param password
 	 */
-	public void setDocumento(String documento) {
-		this.documento = documento;
-	}
-
-	/**
-	 * @return the userName
-	 */
-	@Column(name = "USERNAME", nullable = false, unique = true)
-	public String getUserName() {
-		return userName;
-	}
-
-	/**
-	 * @param userName the userName to set
-	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	/**
@@ -152,7 +128,7 @@ public class Usuario implements Serializable {
 	/**
 	 * @return the mail
 	 */
-	@Column(name = "EMAIL", nullable = false)
+	@Column(name = "EMAIL", nullable = false , unique=true)
 	public String getMail() {
 		return mail;
 	}
@@ -187,7 +163,7 @@ public class Usuario implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return "UsuarioBO [id=" + id + ", documento=" + documento + ", userName=" + userName + ", nombre=" + nombre
+		return "UsuarioBO [id=" + id + ", password=" + password + ", nombre=" + nombre
 				+ ", mail=" + mail + ", rol=" + rol + "]";
 	}
 

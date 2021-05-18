@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -8,14 +9,18 @@ import { PostService } from './post.service';
 })
 export class PostComponent implements OnInit {
 
-  post;
+  post : Array<Object>;
+  user = {"id":0,"password":"","nombre":"","mail":"","rol":{"id":0,"descripcion":""}};
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, public router:Router) { }
 
   ngOnInit(): void {
-    this.post = this.postService.getPost().subscribe(
-      post => this.post = post
-    );
+    if(sessionStorage.user == undefined)
+      this.router.navigateByUrl('/login');
+    else
+      this.postService.getPost().subscribe(
+        (post) => this.post = post
+      );
   }
 
 }
