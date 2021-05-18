@@ -6,3 +6,7 @@ Para el front:
 Para el back:
 1. Importar proyecto e el editor
 2. Run App boot
+
+Para la base de datos
+1. Crear un schema llamado ministerio en MySQL
+2. Una vez mapeadas las tablas, agregar info en la tablas
